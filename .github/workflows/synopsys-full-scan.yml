@@ -1,3 +1,5 @@
+name: "Synopsys Full Scan"
+
 on:
   workflow_dispatch
 
