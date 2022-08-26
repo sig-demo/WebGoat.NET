@@ -1,4 +1,4 @@
-name: "Synopsys SAST + SCA"
+name: "Break the build SAST + SCA"
 
 on:
   workflow_dispatch
