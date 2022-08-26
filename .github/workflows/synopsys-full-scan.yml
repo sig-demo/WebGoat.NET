@@ -39,4 +39,3 @@ jobs:
           --detect.code.location.name=cppcheck-main `
           --detect.blackduck.signature.scanner.snippet.matching=SNIPPET_MATCHING `
           --detect.blackduck.signature.scanner.upload.source.mode=true `
-          --detect.search.depth=3
