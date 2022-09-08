@@ -18,8 +18,6 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-    - name: Set up Visual Studio environment
-      uses: ilammy/msvc-dev-cmd@v1
         
     # Perform Static Analysis
     - name: Polaris (SAST)
