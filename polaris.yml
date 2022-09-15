@@ -8,9 +8,9 @@ project:
 capture:
   build:
     cleanCommands:
-    - shell: [msbuild, WebGoat.NET.sln, '/t:Clean', '/p:Configuration=Debug', '/p:Platform="Any CPU"']
+    - shell: [msbuild, WebGoat.NET.sln, '/t:Clean']
     buildCommands:
-    - shell: [msbuild, WebGoat.NET.sln, '/t:Build', '/p:Configuration=Debug', '/p:Platform="Any CPU"']
+    - shell: [msbuild, WebGoat.NET.sln, '/t:Build']
   fileSystem:
     ears:
       extensions: [ear]
