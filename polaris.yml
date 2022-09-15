@@ -6,10 +6,12 @@ project:
     name: ${scm.git.commit}
     date: ${scm.git.commit.date}
 capture:
-  cleanCommands:
+  build:
+    cleanCommands:
     - shell: [msbuild, WebGoatCore.sln, '/t:Clean', '/p:Configuration=Debug', '/p:Platform="Any CPU"']
-  buildCommands:
+    buildCommands:
     - shell: [msbuild, WebGoatCore.sln, '/t:Build', '/p:Configuration=Debug', '/p:Platform="Any CPU"']
+  fileSystem:
     ears:
       extensions: [ear]
       files:
