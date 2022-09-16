@@ -33,9 +33,9 @@ jobs:
     - name: Polaris (SAST) - Incremental
       if: ${{github.event_name == 'pull_request'}}
       run: |
-        curl -fLOsS $POLARIS_SERVER_URL/api/tools/polaris_cli-linux64.zip
-        unzip -d /tmp -jo polaris_cli-linux64.zip
-        /tmp/polaris analyze -w --coverity-ignore-capture-failure --incremental files-to-scan.txt | tee polaris-output.txt    
+        certutil -urlcache -split -f "${{ secrets.POLARIS_SERVER_URL }}/api/tools/polaris_cli-win64.zip" polaris.zip
+        7z e "-o." polaris.zip
+        ./polaris.exe analyze -w --coverity-ignore-capture-failure --incremental files-to-scan.txt | tee polaris-output.txt    
  
     # Convert Polaris to SARIF
     - name: polaris_sarif
