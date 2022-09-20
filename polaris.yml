@@ -47,3 +47,4 @@ install:
   coverity:
     version: default
 serverUrl: https://demo.polaris.synopsys.com
+
